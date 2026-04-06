@@ -6,6 +6,7 @@ import Container from "./Container";
 
 const navLinks = [
   { label: "Vision", href: "#vision" },
+  { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Impact", href: "#impact" },
 ];

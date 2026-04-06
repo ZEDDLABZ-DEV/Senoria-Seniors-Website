@@ -2,6 +2,7 @@ import Container from "./Container";
 
 const footerLinks = {
   product: [
+    { label: "Services", href: "#services" },
     { label: "Features", href: "#benefits" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Impact", href: "#impact" },
@@ -46,12 +47,20 @@ export default function Footer() {
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Smarter care management for families, caregivers, and care organizations.
             </p>
-            <a
-              href="mailto:hello@senoria.care"
-              className="text-sm font-medium text-primary-600 hover:text-primary-700"
-            >
-              hello@senoria.care
-            </a>
+            <div className="space-y-1.5">
+              <a
+                href="tel:+16046210194"
+                className="block text-sm font-medium text-slate-600 hover:text-primary-600"
+              >
+                +1-604-621-0194
+              </a>
+              <a
+                href="mailto:hello@senoria.care"
+                className="block text-sm font-medium text-primary-600 hover:text-primary-700"
+              >
+                hello@senoria.care
+              </a>
+            </div>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
