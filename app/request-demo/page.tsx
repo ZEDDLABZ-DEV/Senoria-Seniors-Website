@@ -86,8 +86,9 @@ export default function RequestDemoPage() {
             </div>
             <h1 className="mb-4 text-3xl font-bold text-slate-900">Thank You!</h1>
             <p className="mb-8 text-lg leading-relaxed text-slate-600">
-              Your demo request has been submitted successfully. We&apos;ll get back to
-              you shortly with next steps.
+              Your early access request has been submitted successfully. We&apos;re
+              currently working with early partners to shape the future of the
+              platform and will be in touch with next steps soon.
             </p>
             <Link
               href="/"
@@ -125,12 +126,12 @@ export default function RequestDemoPage() {
           >
             <div className="mb-8">
               <h1 className="mb-3 text-3xl font-bold text-slate-900 md:text-4xl">
-                Request a Demo
+                Request Early Access
               </h1>
               <p className="text-lg leading-relaxed text-slate-600">
-                See how Senoria Seniors can bring transparency and peace of mind to
-                your care operations. Fill in the form below and we&apos;ll schedule a
-                personalized walkthrough.
+                Senoria Seniors is currently in development. Join our early access
+                program to be among the first to experience the platform. Fill in the
+                form below and we&apos;ll keep you updated on our progress.
               </p>
             </div>
 
@@ -262,7 +263,7 @@ export default function RequestDemoPage() {
                   </>
                 ) : (
                   <>
-                    Submit Request
+                    Request Early Access
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>

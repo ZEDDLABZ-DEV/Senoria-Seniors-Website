@@ -8,7 +8,7 @@ const footerLinks = {
     { label: "Impact", href: "#impact" },
   ],
   company: [
-    { label: "About Us", href: "#vision" },
+    { label: "About Us", href: "#about" },
     { label: "Contact", href: "#cta" },
     { label: "Careers", href: "#" },
   ],
@@ -45,7 +45,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-slate-500">
-              Smarter care management for families, caregivers, and care organizations.
+              Building smarter care management for families, caregivers, and care organizations. Currently in development.
             </p>
             <p className="text-sm">
               <span className="font-medium text-slate-600">Phone:</span>{" "}

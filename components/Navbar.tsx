@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "./Container";
 
 const navLinks = [
+  { label: "About Us", href: "#about" },
   { label: "Vision", href: "#vision" },
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
@@ -65,7 +66,7 @@ export default function Navbar() {
               href="/request-demo"
               className="rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md"
             >
-              Request Demo
+              Join Early Access
             </a>
           </div>
 
@@ -110,7 +111,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="mt-1 rounded-lg bg-primary-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
                 >
-                  Request Demo
+                  Join Early Access
                 </a>
               </div>
             </Container>

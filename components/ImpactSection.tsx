@@ -10,7 +10,7 @@ const audiences = [
   {
     title: "Families",
     description:
-      "Peace of mind through transparent, real-time care updates. Always know how your loved one is doing — without having to ask.",
+      "Designed to bring peace of mind through transparent, real-time care updates. You'll always know how your loved one is doing — without having to ask.",
     image: "/images/impact-families.jpg",
     imageAlt: "Family member caring for elderly loved one at home",
     gradient: "from-rose-50 to-primary-50",
@@ -20,7 +20,7 @@ const audiences = [
   {
     title: "Care Agencies",
     description:
-      "Better operational visibility and accountability across your entire care team. Make data-driven decisions to improve service quality.",
+      "Our platform will provide better operational visibility and accountability across your entire care team, helping you make data-driven decisions to improve service quality.",
     image: "/images/impact-agency.jpg",
     imageAlt: "Care agency nurse assisting senior patient with daily activities",
     gradient: "from-primary-50 to-teal-50",
@@ -30,7 +30,7 @@ const audiences = [
   {
     title: "Caregivers",
     description:
-      "Simple, intuitive tools to document and communicate care activities. Focus on providing great care while the system handles the rest.",
+      "We are building simple, intuitive tools to document and communicate care activities — so caregivers can focus on providing great care while the platform handles the rest.",
     image: "/images/impact-caregiver.jpg",
     imageAlt: "Caregiver documenting care activities for senior patient",
     gradient: "from-teal-50 to-emerald-50",
@@ -40,9 +40,9 @@ const audiences = [
 ];
 
 const stats = [
-  { label: "Real-Time Care Updates", sublabel: "Live visibility into every visit" },
-  { label: "AI-Powered Summaries", sublabel: "Intelligent care pattern analysis" },
-  { label: "Centralized Management", sublabel: "One platform for all stakeholders" },
+  { label: "Real-Time Care Updates", sublabel: "Planned live visibility into every visit" },
+  { label: "AI-Powered Summaries", sublabel: "Planned intelligent care pattern analysis" },
+  { label: "Centralized Management", sublabel: "Coming soon — one platform for all stakeholders" },
 ];
 
 function AudienceCard({ audience, index }: { audience: typeof audiences[number]; index: number }) {
@@ -90,7 +90,7 @@ export default function ImpactSection() {
             Better Outcomes for Everyone Involved
           </h2>
           <p className="text-lg leading-relaxed text-slate-500">
-            Senoria Seniors is designed to benefit every stakeholder in the care
+            Senoria Seniors is being designed to benefit every stakeholder in the care
             ecosystem — from the families who worry to the caregivers who serve.
           </p>
         </div>

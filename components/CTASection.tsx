@@ -28,12 +28,12 @@ export default function CTASection() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-              Discover a Smarter Way to Manage Care
+              Be Part of the Future of Care Management
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-primary-100">
-              See how Senoria Seniors can bring transparency, accountability, and
-              peace of mind to your care operations. Schedule a personalized
-              walkthrough today.
+              Senoria Seniors is currently in development. Join our early access
+              program to be among the first to experience a smarter way to manage
+              care — and help shape the platform from the ground up.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -41,7 +41,7 @@ export default function CTASection() {
                 href="/request-demo"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-primary-700 shadow-lg transition-all hover:shadow-xl"
               >
-                Request Demo
+                Request Early Access
                 <svg
                   width="16"
                   height="16"
@@ -59,7 +59,7 @@ export default function CTASection() {
                 href="#"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-white/10"
               >
-                Contact Us
+                Join the Waitlist
               </a>
             </div>
           </div>

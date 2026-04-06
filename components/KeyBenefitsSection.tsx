@@ -9,7 +9,7 @@ const benefits = [
   {
     title: "Real-Time Care Visibility",
     description:
-      "See care activities as they happen. Families and managers have a live view of visit status, completed tasks, and caregiver notes.",
+      "Families and managers will have a live view of visit status, completed tasks, and caregiver notes — designed to help you see care activities as they happen.",
     gradient: "from-primary-500 to-primary-600",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -21,7 +21,7 @@ const benefits = [
   {
     title: "Intelligent Alerts",
     description:
-      "Automated notifications flag missed medications, late visits, or unusual patterns — so nothing critical goes unnoticed.",
+      "Planned automated notifications will flag missed medications, late visits, or unusual patterns — so nothing critical goes unnoticed.",
     gradient: "from-amber-500 to-amber-600",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -33,7 +33,7 @@ const benefits = [
   {
     title: "AI-Powered Summaries",
     description:
-      "Machine learning analyzes care patterns and generates easy-to-understand summaries, highlighting trends and potential concerns.",
+      "Our planned AI-powered system will analyze care patterns and generate easy-to-understand summaries, highlighting trends and potential concerns.",
     gradient: "from-violet-500 to-violet-600",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -45,7 +45,7 @@ const benefits = [
   {
     title: "Operational Management",
     description:
-      "Care agencies gain a centralized view of service delivery across all clients, enabling data-driven decisions and quality improvements.",
+      "Our upcoming CRM module will allow care agencies to gain a centralized view of service delivery across all clients, enabling data-driven decisions and quality improvements.",
     gradient: "from-teal-500 to-teal-600",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -58,7 +58,7 @@ const benefits = [
   {
     title: "Secure Role-Based Access",
     description:
-      "Granular permissions ensure each user — family member, caregiver, or manager — sees only what's relevant to their role.",
+      "Planned granular permissions will ensure each user — family member, caregiver, or manager — sees only what's relevant to their role.",
     gradient: "from-emerald-500 to-emerald-600",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -99,11 +99,12 @@ export default function KeyBenefitsSection() {
             Key Benefits
           </span>
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Everything You Need for Better Care Management
+            Planned Features for Better Care Management
           </h2>
           <p className="text-lg leading-relaxed text-slate-500">
-            Senoria Seniors combines real-time visibility, intelligent automation, and
-            secure access to transform how care is managed and communicated.
+            Senoria Seniors is being built to combine real-time visibility, intelligent
+            automation, and secure access — designed to transform how care is managed
+            and communicated.
           </p>
         </div>
 

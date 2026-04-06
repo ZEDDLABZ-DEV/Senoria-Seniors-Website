@@ -10,7 +10,7 @@ const services = [
   {
     title: "Assisted Living",
     description:
-      "Comprehensive support for daily activities including personal care, medication management, and social engagement — enabling seniors to live with dignity and independence.",
+      "Our platform will support assisted living facilities with tools for managing daily activities including personal care, medication management, and social engagement — designed to help seniors live with dignity and independence.",
     image: "/images/service-assisted-living.jpg",
     imageAlt: "Caregiver assisting elderly resident with daily activities in assisted living facility",
     gradient: "from-primary-500 to-primary-600",
@@ -18,7 +18,7 @@ const services = [
   {
     title: "Long Term Care",
     description:
-      "Dedicated long-term care solutions for individuals requiring ongoing medical attention, rehabilitation, and round-the-clock supervision in a safe, supportive environment.",
+      "We are developing dedicated long-term care solutions for individuals requiring ongoing medical attention, rehabilitation, and round-the-clock supervision in a safe, supportive environment.",
     image: "/images/service-long-term-care.jpg",
     imageAlt: "Nurse providing attentive long-term care to senior patient",
     gradient: "from-teal-500 to-teal-600",
@@ -26,7 +26,7 @@ const services = [
   {
     title: "Home Support Services",
     description:
-      "Flexible in-home care that allows seniors to remain in the comfort of their own homes while receiving personalized assistance with daily routines, meals, and companionship.",
+      "Our upcoming home support module will enable flexible in-home care, allowing seniors to remain in the comfort of their own homes while receiving personalized assistance with daily routines, meals, and companionship.",
     image: "/images/service-home-support.jpg",
     imageAlt: "Home care worker supporting elderly person in their own home",
     gradient: "from-rose-500 to-rose-600",
@@ -34,10 +34,34 @@ const services = [
   {
     title: "Dementia Care",
     description:
-      "Specialized care programs designed for individuals living with dementia and Alzheimer's, focusing on safety, cognitive engagement, routine stability, and compassionate support.",
+      "We are planning specialized care programs for individuals living with dementia and Alzheimer's, focusing on safety, cognitive engagement, routine stability, and compassionate support.",
     image: "/images/service-dementia-care.jpg",
     imageAlt: "Caregiver providing compassionate support to elderly person with dementia",
     gradient: "from-violet-500 to-violet-600",
+  },
+  {
+    title: "Respite Care",
+    description:
+      "Our upcoming respite care services will provide temporary relief for primary caregivers, ensuring seniors continue to receive quality care while their families take a well-deserved break.",
+    image: "/images/hero-senior-care.jpg",
+    imageAlt: "Senior receiving attentive temporary care from a professional caregiver",
+    gradient: "from-amber-500 to-amber-600",
+  },
+  {
+    title: "Companionship",
+    description:
+      "We are building companionship programs designed to reduce isolation and loneliness among seniors through meaningful social interaction, engaging activities, and genuine human connection.",
+    image: "/images/service-companionship.jpg",
+    imageAlt: "Caregiver sharing a warm moment of companionship with an elderly person",
+    gradient: "from-sky-500 to-sky-600",
+  },
+  {
+    title: "Personal Care",
+    description:
+      "Our planned personal care services will offer dignified assistance with daily living activities such as bathing, grooming, dressing, and mobility — tailored to each individual's needs and preferences.",
+    image: "/images/service-personal-care.jpg",
+    imageAlt: "Caregiver gently combing and grooming an elderly person's hair at home",
+    gradient: "from-emerald-500 to-emerald-600",
   },
 ];
 
@@ -85,13 +109,13 @@ export default function ServicesSection() {
             Comprehensive Care, Tailored to Every Need
           </h2>
           <p className="text-lg leading-relaxed text-slate-500">
-            We provide a full spectrum of senior care services — from independent
-            living support to specialized dementia care — ensuring every individual
-            receives the attention they deserve.
+            We are building a full spectrum of senior care solutions — from independent
+            living support to specialized dementia care — designed to ensure every
+            individual receives the attention they deserve.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}

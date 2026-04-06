@@ -15,7 +15,7 @@ interface DemoRequestBody {
 export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "akshulchawla@gmail.com";
+    const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "grewalramandeepkaur@gmail.com";
 
     const body: DemoRequestBody = await req.json();
 

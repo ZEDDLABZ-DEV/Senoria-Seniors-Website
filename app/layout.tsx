@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Senoria Seniors — Smarter Care for the People Who Matter Most",
+  title: "Senoria Seniors — Building Smarter Care for the People Who Matter Most",
   description:
-    "Senoria Seniors helps families, caregivers, and care organizations stay connected through real-time care updates, intelligent alerts, and AI-powered insights.",
+    "Senoria Seniors is building a platform to help families, caregivers, and care organizations stay connected through real-time care updates, intelligent alerts, and AI-powered insights. Currently in development.",
 };
 
 export default function RootLayout({

@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5">
               <span className="h-2 w-2 rounded-full bg-teal-400" />
               <span className="text-xs font-semibold tracking-wide text-primary-700 uppercase">
-                Care Management Platform
+                Currently in Development
               </span>
             </div>
 
@@ -34,9 +34,10 @@ export default function HeroSection() {
             </h1>
 
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-600">
-              Senoria Seniors helps families, caregivers, and care organizations stay
-              connected through real-time care updates, intelligent alerts, and
-              AI-powered insights — bringing transparency to every moment of care.
+              We are building a platform to help families, caregivers, and care
+              organizations stay connected through real-time care updates, intelligent
+              alerts, and planned AI-powered insights — bringing transparency to every
+              moment of care.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -44,7 +45,7 @@ export default function HeroSection() {
                 href="/request-demo"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-600/20 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/25"
               >
-                Request Demo
+                Join Early Access
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -77,9 +78,9 @@ export default function HeroSection() {
 
               <div className="absolute right-4 bottom-4 left-4 flex gap-3">
                 {[
-                  { label: "Visits Today", value: "12" },
-                  { label: "Tasks Done", value: "47" },
-                  { label: "Alerts", value: "2" },
+                  { label: "Track Visits", value: "Live" },
+                  { label: "Care Tasks", value: "Auto" },
+                  { label: "Smart Alerts", value: "AI" },
                 ].map((stat) => (
                   <div key={stat.label} className="flex-1 rounded-lg bg-white/95 p-3 shadow-lg backdrop-blur-sm">
                     <div className="text-lg font-bold text-primary-600">{stat.value}</div>

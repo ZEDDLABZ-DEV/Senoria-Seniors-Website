@@ -71,7 +71,7 @@ export default function ProblemSection() {
             <p className="text-lg leading-relaxed text-slate-500">
               Caring for seniors is demanding. Without the right tools, critical
               information falls through the cracks — affecting families, caregivers,
-              and organizations alike.
+              and organizations alike. We are building Senoria Seniors to solve these challenges.
             </p>
           </div>
 

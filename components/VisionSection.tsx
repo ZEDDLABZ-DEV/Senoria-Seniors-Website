@@ -40,9 +40,9 @@ export default function VisionSection() {
                 clarity to deliver excellent service, consistently.
               </p>
               <p>
-                Senoria Seniors exists to bridge the communication gap between
+                We are building Senoria Seniors to bridge the communication gap between
                 caregivers, families, and care organizations — creating a connected
-                ecosystem where care is documented, transparent, and continuously
+                ecosystem where care will be documented, transparent, and continuously
                 improving.
               </p>
             </div>
@@ -51,15 +51,15 @@ export default function VisionSection() {
               {[
                 {
                   value: "Transparency",
-                  desc: "Every care activity documented and accessible to those who need to know.",
+                  desc: "Our platform will document every care activity, making it accessible to those who need to know.",
                 },
                 {
                   value: "Accountability",
-                  desc: "Clear records that build trust between all parties involved.",
+                  desc: "Our upcoming tools will provide clear records that build trust between all parties.",
                 },
                 {
                   value: "Connection",
-                  desc: "Bridging the gap between caregivers, families, and organizations.",
+                  desc: "Designed to bridge the gap between caregivers, families, and organizations.",
                 },
               ].map((pillar) => (
                 <div key={pillar.value} className="rounded-xl border border-slate-100 bg-slate-50/50 p-5">

@@ -42,10 +42,10 @@ export default function FutureSection() {
               care management systems will only increase.
             </p>
             <p className="text-lg leading-relaxed text-slate-800">
-              Senoria Seniors is built for this future — a platform that evolves with
-              the needs of caregivers, families, and organizations, leveraging AI and
-              real-time data to ensure that care is not just delivered, but truly
-              understood.
+              We are building Senoria Seniors for this future — a platform that will evolve
+              with the needs of caregivers, families, and organizations, leveraging planned
+              AI capabilities and real-time data to ensure that care is not just delivered,
+              but truly understood.
             </p>
 
             <div className="mt-12 inline-flex items-center gap-3 rounded-full border border-primary-200 bg-white/90 px-6 py-3 shadow-sm backdrop-blur-sm">
@@ -64,7 +64,7 @@ export default function FutureSection() {
                 <polyline points="12 6 12 12 16 14" />
               </svg>
               <span className="text-sm font-semibold text-primary-700">
-                The future of care is connected, transparent, and intelligent.
+                We are building toward a future where care is connected, transparent, and intelligent.
               </span>
             </div>
           </div>
