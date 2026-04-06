@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "akshulchawla@gmail.com";
+export const dynamic = "force-dynamic";
 
 interface DemoRequestBody {
   fullName: string;
@@ -15,6 +14,9 @@ interface DemoRequestBody {
 
 export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "akshulchawla@gmail.com";
+
     const body: DemoRequestBody = await req.json();
 
     const { fullName, email, organization, role, phone, message } = body;
