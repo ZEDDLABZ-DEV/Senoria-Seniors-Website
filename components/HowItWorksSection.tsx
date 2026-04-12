@@ -103,10 +103,10 @@ export default function HowItWorksSection() {
     <SectionWrapper id="how-it-works" background="gradient">
       <Container>
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="mb-3 inline-block text-sm font-semibold tracking-wide text-primary-600 uppercase">
+          <span className="mb-4 inline-block text-5xl font-black tracking-wide text-primary-600 uppercase md:text-6xl">
             How It Will Work
           </span>
-          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
+          <h2 className="mb-4 text-4xl font-extrabold text-slate-900 md:text-5xl">
             A Connected Care Workflow — Coming Soon
           </h2>
           <p className="text-lg leading-relaxed text-slate-500">

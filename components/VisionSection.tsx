@@ -23,10 +23,10 @@ export default function VisionSection() {
           </div>
 
           <div>
-            <span className="mb-3 inline-block text-sm font-semibold tracking-wide text-teal-600 uppercase">
+            <span className="mb-4 inline-block text-5xl font-black tracking-wide text-teal-600 uppercase md:text-6xl">
               Our Vision
             </span>
-            <h2 className="mb-8 text-3xl font-bold text-slate-900 md:text-4xl">
+            <h2 className="mb-8 text-4xl font-extrabold text-slate-900 md:text-5xl">
               Transparency, Accountability, and{" "}
               <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">
                 Trust in Every Moment of Care

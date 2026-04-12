@@ -27,10 +27,10 @@ export default function FutureSection() {
       >
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="mb-3 inline-block text-sm font-semibold tracking-wide text-teal-600 uppercase">
+            <span className="mb-4 inline-block text-5xl font-black tracking-wide text-teal-600 uppercase md:text-6xl">
               The Future of Care
             </span>
-            <h2 className="mb-8 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+            <h2 className="mb-8 text-4xl font-extrabold text-slate-900 md:text-5xl lg:text-6xl">
               Building the Future of{" "}
               <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">
                 Connected Care

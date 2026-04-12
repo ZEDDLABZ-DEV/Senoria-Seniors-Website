@@ -32,10 +32,10 @@ export default function AboutSection() {
     <SectionWrapper id="about" background="light">
       <Container>
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="mb-3 inline-block text-sm font-semibold tracking-wide text-primary-600 uppercase">
+          <span className="mb-4 inline-block text-5xl font-black tracking-wide text-primary-600 uppercase md:text-6xl">
             About Us
           </span>
-          <h2 className="mb-5 text-3xl font-bold text-slate-900 md:text-4xl">
+          <h2 className="mb-5 text-4xl font-extrabold text-slate-900 md:text-5xl">
             Compassionate Care,{" "}
             <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">
               Canadian Values

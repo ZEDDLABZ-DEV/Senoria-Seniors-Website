@@ -27,7 +27,7 @@ export default function CTASection() {
       >
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">
               Be Part of the Future of Care Management
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-primary-100">
