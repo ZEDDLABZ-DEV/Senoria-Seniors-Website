@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Container from "./Container";
 
 const navLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Vision", href: "#vision" },
-  { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Impact", href: "#impact" },
+  { label: "About Us", href: "/#about" },
+  { label: "Vision", href: "/#vision" },
+  { label: "Services", href: "/#services" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Impact", href: "/#impact" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -31,25 +33,16 @@ export default function Navbar() {
       }`}
     >
       <Container>
-        <div className="flex h-16 items-center justify-between md:h-20">
-          <a href="#" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary-600 to-teal-500">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-              </svg>
-            </div>
-            <span className="text-lg font-bold text-slate-800">
-              Senoria <span className="font-medium text-primary-600">Seniors</span>
-            </span>
+        <div className="flex h-24 items-center justify-between md:h-28">
+          <a href="#" className="flex items-center" aria-label="Senoria Seniors">
+            <Image
+              src="/images/logo.png"
+              alt="Senoria Seniors"
+              width={488}
+              height={196}
+              priority
+              className="h-20 w-auto md:h-24"
+            />
           </a>
 
           <div className="hidden items-center gap-8 md:flex">

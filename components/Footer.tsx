@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "./Container";
 
 const footerLinks = {
@@ -8,9 +9,9 @@ const footerLinks = {
     { label: "Impact", href: "#impact" },
   ],
   company: [
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#cta" },
-    { label: "Careers", href: "#" },
+    { label: "About Us", href: "/#about" },
+    { label: "Contact", href: "/#cta" },
+    { label: "Careers", href: "/careers" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },
@@ -25,24 +26,14 @@ export default function Footer() {
       <Container>
         <div className="mb-12 grid gap-10 md:grid-cols-4">
           <div>
-            <div className="mb-4 flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-600 to-teal-500">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
-              </div>
-              <span className="text-lg font-bold text-slate-800">
-                Senoria <span className="font-medium text-primary-600">Seniors</span>
-              </span>
+            <div className="mb-4 flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Senoria Seniors"
+                width={488}
+                height={196}
+                className="h-20 w-auto md:h-24"
+              />
             </div>
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Building smarter care management for families, caregivers, and care organizations. Currently in development.

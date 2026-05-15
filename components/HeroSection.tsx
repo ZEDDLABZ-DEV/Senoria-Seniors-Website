@@ -6,7 +6,7 @@ import Container from "./Container";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-primary-50/40 to-teal-50/60 pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-primary-50/40 to-teal-50/60 pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary-200/20 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-teal-200/20 blur-3xl" />
