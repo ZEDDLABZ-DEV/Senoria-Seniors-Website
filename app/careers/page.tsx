@@ -6,12 +6,16 @@ import Link from "next/link";
 import Container from "@/components/Container";
 
 const positions = [
-  "Caregiver",
-  "Senior Caregiver",
-  "Live-In Caregiver",
-  "Personal Support Worker (PSW)",
-  "Certified Nursing Assistant (CNA)",
-  "Companion / Sitter",
+  "Health Care Aide (HCA)",
+  "Care Aide / Personal Support Worker (PSW)",
+  "Community Support Worker",
+  "Companion Caregiver",
+  "Home Support Worker",
+  "Respite Care Worker",
+  "Registered Nurse (RN)",
+  "Licensed Practical Nurse (LPN)",
+  "Sales Closer",
+  "Client Acquisition Specialist",
   "Other",
 ];
 
@@ -45,6 +49,7 @@ interface FormState {
   availability: string;
   certifications: string;
   coverLetter: string;
+  immigrationSupport: string;
 }
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -59,6 +64,7 @@ const initialForm: FormState = {
   availability: "",
   certifications: "",
   coverLetter: "",
+  immigrationSupport: "",
 };
 
 export default function CareersPage() {
@@ -111,6 +117,14 @@ export default function CareersPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
+
+    if (!form.immigrationSupport) {
+      setErrorMsg(
+        "Please answer the question about immigration or work authorization support."
+      );
+      setStatus("error");
+      return;
+    }
 
     if (!resume) {
       setErrorMsg("Please upload your resume.");
@@ -445,6 +459,42 @@ export default function CareersPage() {
                     placeholder="Tell us a little about yourself and your passion for caregiving..."
                     className="w-full resize-none rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
                   />
+                </div>
+
+                <div className="sm:col-span-2">
+                  <fieldset>
+                    <legend className="mb-2 block text-sm font-medium text-slate-700">
+                      Do you currently require employer assistance or support
+                      related to immigration or work authorization in Canada?{" "}
+                      <span className="text-red-500">*</span>
+                    </legend>
+                    <div className="flex flex-wrap gap-3">
+                      {["Yes", "No"].map((option) => {
+                        const checked = form.immigrationSupport === option;
+                        return (
+                          <label
+                            key={option}
+                            className={`flex flex-1 cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 text-sm font-medium transition-colors sm:flex-none sm:min-w-[140px] ${
+                              checked
+                                ? "border-primary-500 bg-primary-50 text-primary-700 ring-2 ring-primary-500/20"
+                                : "border-slate-200 bg-white text-slate-700 hover:border-primary-300 hover:bg-primary-50/40"
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name="immigrationSupport"
+                              value={option}
+                              checked={checked}
+                              onChange={handleChange}
+                              required
+                              className="h-4 w-4 accent-primary-600"
+                            />
+                            {option}
+                          </label>
+                        );
+                      })}
+                    </div>
+                  </fieldset>
                 </div>
 
                 <div className="sm:col-span-2">

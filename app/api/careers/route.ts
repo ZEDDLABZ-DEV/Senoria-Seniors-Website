@@ -52,6 +52,8 @@ export async function POST(req: NextRequest) {
       (formData.get("certifications") as string | null)?.trim() || "";
     const coverLetter =
       (formData.get("coverLetter") as string | null)?.trim() || "";
+    const immigrationSupport =
+      (formData.get("immigrationSupport") as string | null)?.trim() || "";
     const resume = formData.get("resume") as File | null;
 
     if (
@@ -61,7 +63,8 @@ export async function POST(req: NextRequest) {
       !location ||
       !position ||
       !experience ||
-      !availability
+      !availability ||
+      !immigrationSupport
     ) {
       return NextResponse.json(
         { error: "Please fill in all required fields." },
@@ -117,6 +120,7 @@ export async function POST(req: NextRequest) {
             ${renderRow("Position Applied For", `<strong>${escapeHtml(position)}</strong>`)}
             ${renderRow("Years of Experience", escapeHtml(experience))}
             ${renderRow("Availability", escapeHtml(availability))}
+            ${renderRow("Needs Immigration / Work Authorization Support", `<strong>${escapeHtml(immigrationSupport)}</strong>`)}
             ${certifications ? renderRow("Certifications", escapeHtml(certifications).replace(/\n/g, "<br/>")) : ""}
             ${coverLetter ? renderRow("Cover Letter", escapeHtml(coverLetter).replace(/\n/g, "<br/>"), true) : renderRow("Cover Letter", "<em style='color:#94a3b8;'>Not provided</em>", true)}
           </table>
