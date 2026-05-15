@@ -31,7 +31,7 @@ export default function CTASection() {
               Be Part of the Future of Care Management
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-primary-100">
-              Senoria Seniors is currently in development. Join our early access
+              Senoria Seniors is currently in development. Join our easy access
               program to be among the first to experience a smarter way to manage
               care — and help shape the platform from the ground up.
             </p>
@@ -41,7 +41,7 @@ export default function CTASection() {
                 href="/request-demo"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-primary-700 shadow-lg transition-all hover:shadow-xl"
               >
-                Request Early Access
+                Request Easy Access
                 <svg
                   width="16"
                   height="16"
@@ -54,12 +54,6 @@ export default function CTASection() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-white/10"
-              >
-                Join the Waitlist
               </a>
             </div>
           </div>

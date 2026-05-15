@@ -8,44 +8,12 @@ import SectionWrapper from "./SectionWrapper";
 
 const services = [
   {
-    title: "Assisted Living",
+    title: "Personal Care",
     description:
-      "Our platform will support assisted living facilities with tools for managing daily activities including personal care, medication management, and social engagement — designed to help seniors live with dignity and independence.",
-    image: "/images/service-assisted-living.jpg",
-    imageAlt: "Caregiver assisting elderly resident with daily activities in assisted living facility",
-    gradient: "from-primary-500 to-primary-600",
-  },
-  {
-    title: "Long Term Care",
-    description:
-      "We are developing dedicated long-term care solutions for individuals requiring ongoing medical attention, rehabilitation, and round-the-clock supervision in a safe, supportive environment.",
-    image: "/images/service-long-term-care.jpg",
-    imageAlt: "Nurse providing attentive long-term care to senior patient",
-    gradient: "from-teal-500 to-teal-600",
-  },
-  {
-    title: "Home Support Services",
-    description:
-      "Our upcoming home support module will enable flexible in-home care, allowing seniors to remain in the comfort of their own homes while receiving personalized assistance with daily routines, meals, and companionship.",
-    image: "/images/service-home-support.jpg",
-    imageAlt: "Home care worker supporting elderly person in their own home",
-    gradient: "from-rose-500 to-rose-600",
-  },
-  {
-    title: "Dementia Care",
-    description:
-      "We are planning specialized care programs for individuals living with dementia and Alzheimer's, focusing on safety, cognitive engagement, routine stability, and compassionate support.",
-    image: "/images/service-dementia-care.jpg",
-    imageAlt: "Caregiver providing compassionate support to elderly person with dementia",
-    gradient: "from-violet-500 to-violet-600",
-  },
-  {
-    title: "Respite Care",
-    description:
-      "Our upcoming respite care services will provide temporary relief for primary caregivers, ensuring seniors continue to receive quality care while their families take a well-deserved break.",
-    image: "/images/hero-senior-care.jpg",
-    imageAlt: "Senior receiving attentive temporary care from a professional caregiver",
-    gradient: "from-amber-500 to-amber-600",
+      "Our planned personal care services will offer dignified assistance with daily living activities such as bathing, grooming, dressing, and mobility — tailored to each individual's needs and preferences.",
+    image: "/images/service-personal-care.jpg",
+    imageAlt: "Caregiver gently combing and grooming an elderly person's hair at home",
+    gradient: "from-emerald-500 to-emerald-600",
   },
   {
     title: "Companionship",
@@ -56,12 +24,68 @@ const services = [
     gradient: "from-sky-500 to-sky-600",
   },
   {
-    title: "Personal Care",
+    title: "Respite Care",
     description:
-      "Our planned personal care services will offer dignified assistance with daily living activities such as bathing, grooming, dressing, and mobility — tailored to each individual's needs and preferences.",
-    image: "/images/service-personal-care.jpg",
-    imageAlt: "Caregiver gently combing and grooming an elderly person's hair at home",
+      "Our upcoming respite care services will provide temporary relief for primary caregivers, ensuring seniors continue to receive quality care while their families take a well-deserved break.",
+    image: "/images/cta-hands.jpg",
+    imageAlt: "Caregiver's supportive hands holding an elderly person's hand, offering relief and reassurance",
+    gradient: "from-amber-500 to-amber-600",
+  },
+  {
+    title: "Dementia Care",
+    description:
+      "We are planning specialized care programs for individuals living with dementia and Alzheimer's, focusing on safety, cognitive engagement, routine stability, and compassionate support.",
+    image: "/images/service-dementia-care.jpg",
+    imageAlt: "Caregiver providing compassionate support to elderly person with dementia",
+    gradient: "from-violet-500 to-violet-600",
+  },
+  {
+    title: "Light Housekeeping",
+    description:
+      "Our upcoming light housekeeping support will help seniors maintain a clean, safe, and comfortable home — covering tidying, laundry, dishes, and everyday household tasks without disrupting their routine.",
+    image: "/images/service-home-support.jpg",
+    imageAlt: "Caregiver tidying a senior's home with light housekeeping tasks",
+    gradient: "from-teal-500 to-teal-600",
+  },
+  {
+    title: "Meal Preparation",
+    description:
+      "We are designing meal preparation services that deliver nutritious, dietitian-friendly meals tailored to each senior's preferences and health needs, supporting healthier living one plate at a time.",
+    image: "/images/service-long-term-care.jpg",
+    imageAlt: "Caregiver preparing a healthy home-cooked meal for an elderly person",
+    gradient: "from-rose-500 to-rose-600",
+  },
+  {
+    title: "Foot Care",
+    description:
+      "Our planned foot care services will provide gentle, hygienic, and routine foot care from trained professionals — helping seniors stay comfortable, mobile, and confident on their feet.",
+    image: "/images/footcare.jpg",
+    imageAlt: "Trained professional providing gentle foot care to an elderly person",
+    gradient: "from-primary-500 to-primary-600",
+  },
+  {
+    title: "Transportation",
+    description:
+      "We are building safe and reliable transportation support to help seniors get to medical appointments, errands, social visits, and community activities — preserving their independence and connection.",
+    image: "/images/transportaion.jpg",
+    imageAlt: "Caregiver helping a senior into a vehicle for a transportation service",
     gradient: "from-emerald-500 to-emerald-600",
+  },
+  {
+    title: "Post-Discharge Care",
+    description:
+      "Our upcoming post-discharge care will provide structured support after a hospital stay — including recovery monitoring, medication reminders, and daily assistance — to help seniors heal safely at home.",
+    image: "/images/postDischarge.jpg",
+    imageAlt: "Caregiver supporting a senior recovering at home after hospital discharge",
+    gradient: "from-sky-500 to-sky-600",
+  },
+  {
+    title: "Nursing Services",
+    description:
+      "We are developing professional nursing services delivered by qualified nurses — covering wound care, medication management, chronic condition support, and ongoing clinical oversight.",
+    image: "/images/impact-families.jpg",
+    imageAlt: "Qualified nurse providing professional clinical care to an elderly patient",
+    gradient: "from-teal-500 to-teal-600",
   },
 ];
 
