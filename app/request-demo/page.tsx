@@ -1,24 +1,29 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Container from "@/components/Container";
 
-const roles = [
-  "Family Member",
-  "Care Agency Owner / Manager",
-  "Caregiver",
-  "Healthcare Administrator",
-  "Other",
+const servicesList = [
+  "Personal Care",
+  "Companionship",
+  "Respite Care",
+  "Dementia Care",
+  "Light Housekeeping",
+  "Meal Preparation",
+  "Foot Care",
+  "Transportation",
+  "Post-Discharge Care",
+  "Nursing Services",
 ];
 
 interface FormData {
   fullName: string;
   email: string;
   phone: string;
-  organization: string;
-  role: string;
+  location: string;
+  services: string[];
   message: string;
 }
 
@@ -29,12 +34,25 @@ export default function RequestDemoPage() {
     fullName: "",
     email: "",
     phone: "",
-    organization: "",
-    role: "",
+    location: "",
+    services: [],
     message: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [servicesOpen]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -42,8 +60,24 @@ export default function RequestDemoPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const toggleService = (service: string) => {
+    setForm((prev) => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter((s) => s !== service)
+        : [...prev.services, service],
+    }));
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    if (form.services.length === 0) {
+      setErrorMsg("Please select at least one service you are interested in.");
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
     setErrorMsg("");
 
@@ -86,7 +120,7 @@ export default function RequestDemoPage() {
             </div>
             <h1 className="mb-4 text-3xl font-bold text-slate-900">Thank You!</h1>
             <p className="mb-8 text-lg leading-relaxed text-slate-600">
-              Your early access request has been submitted successfully. We&apos;re
+              Your easy access request has been submitted successfully. We&apos;re
               currently working with early partners to shape the future of the
               platform and will be in touch with next steps soon.
             </p>
@@ -126,10 +160,10 @@ export default function RequestDemoPage() {
           >
             <div className="mb-8">
               <h1 className="mb-3 text-3xl font-bold text-slate-900 md:text-4xl">
-                Request Early Access
+                Request Easy Access
               </h1>
               <p className="text-lg leading-relaxed text-slate-600">
-                Senoria Seniors is currently in development. Join our early access
+                Senoria Seniors is currently in development. Join our easy access
                 program to be among the first to experience the platform. Fill in the
                 form below and we&apos;ll keep you updated on our progress.
               </p>
@@ -188,42 +222,113 @@ export default function RequestDemoPage() {
                 </div>
 
                 <div className="sm:col-span-2 md:col-span-1">
-                  <label htmlFor="organization" className="mb-1.5 block text-sm font-medium text-slate-700">
-                    Organization <span className="text-red-500">*</span>
+                  <label htmlFor="location" className="mb-1.5 block text-sm font-medium text-slate-700">
+                    Location <span className="text-red-500">*</span>
                   </label>
                   <input
-                    id="organization"
-                    name="organization"
+                    id="location"
+                    name="location"
                     type="text"
                     required
-                    value={form.organization}
+                    value={form.location}
                     onChange={handleChange}
-                    placeholder="Your company or organization"
+                    placeholder="City, State / Country"
                     className="w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
                   />
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="role" className="mb-1.5 block text-sm font-medium text-slate-700">
-                    Your Role <span className="text-red-500">*</span>
+                  <label className="mb-1.5 block text-sm font-medium text-slate-700">
+                    Services <span className="text-red-500">*</span>
                   </label>
-                  <select
-                    id="role"
-                    name="role"
-                    required
-                    value={form.role}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-800 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
-                  >
-                    <option value="" disabled>
-                      Select your role
-                    </option>
-                    {roles.map((r) => (
-                      <option key={r} value={r}>
-                        {r}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="relative" ref={servicesRef}>
+                    <button
+                      type="button"
+                      onClick={() => setServicesOpen((o) => !o)}
+                      aria-haspopup="listbox"
+                      aria-expanded={servicesOpen}
+                      className="flex w-full items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-left text-sm text-slate-800 transition-colors hover:border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none"
+                    >
+                      <span className={form.services.length === 0 ? "text-slate-400" : "text-slate-800"}>
+                        {form.services.length === 0
+                          ? "Select services you're interested in"
+                          : `${form.services.length} service${form.services.length > 1 ? "s" : ""} selected`}
+                      </span>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`text-slate-400 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                        aria-hidden="true"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+
+                    {servicesOpen && (
+                      <div
+                        role="listbox"
+                        aria-multiselectable="true"
+                        className="absolute z-10 mt-1 max-h-64 w-full overflow-y-auto rounded-lg border border-slate-200 bg-white py-1 shadow-lg"
+                      >
+                        {servicesList.map((service) => {
+                          const checked = form.services.includes(service);
+                          return (
+                            <label
+                              key={service}
+                              className="flex cursor-pointer items-center gap-3 px-4 py-2 text-sm text-slate-700 transition-colors hover:bg-slate-50"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={checked}
+                                onChange={() => toggleService(service)}
+                                className="h-4 w-4 rounded border-slate-300 text-primary-600 focus:ring-primary-500"
+                              />
+                              {service}
+                            </label>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
+                  {form.services.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {form.services.map((service) => (
+                        <span
+                          key={service}
+                          className="inline-flex items-center gap-1 rounded-full bg-primary-50 px-2.5 py-1 text-xs font-medium text-primary-700"
+                        >
+                          {service}
+                          <button
+                            type="button"
+                            onClick={() => toggleService(service)}
+                            aria-label={`Remove ${service}`}
+                            className="text-primary-500 transition-colors hover:text-primary-700"
+                          >
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              aria-hidden="true"
+                            >
+                              <path d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="sm:col-span-2">
@@ -263,7 +368,7 @@ export default function RequestDemoPage() {
                   </>
                 ) : (
                   <>
-                    Request Early Access
+                    Request Easy Access
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>

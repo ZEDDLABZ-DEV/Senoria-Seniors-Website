@@ -12,8 +12,8 @@ export default function VisionSection() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src="/images/vision-family-senior.jpg"
-                alt="Family member spending time with elderly loved one"
+                src="/images/future-care.jpg"
+                alt="Connected, transparent future of senior care"
                 width={700}
                 height={500}
                 className="h-auto w-full object-cover"

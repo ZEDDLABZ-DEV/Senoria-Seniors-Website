@@ -38,15 +38,26 @@ export default function Footer() {
             <p className="mb-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Building smarter care management for families, caregivers, and care organizations. Currently in development.
             </p>
-            <p className="text-sm">
-              <span className="font-medium text-slate-600">Phone:</span>{" "}
-              <a
-                href="tel:+16046210194"
-                className="font-medium text-slate-600 hover:text-primary-600"
-              >
-                +1-604-621-0194
-              </a>
-            </p>
+            <div className="space-y-2 text-sm">
+              <p>
+                <span className="font-medium text-slate-600">Phone:</span>{" "}
+                <a
+                  href="tel:+16046210194"
+                  className="font-medium text-slate-600 hover:text-primary-600"
+                >
+                  +1-604-621-0194
+                </a>
+              </p>
+              <p>
+                <span className="font-medium text-slate-600">Email:</span>{" "}
+                <a
+                  href="mailto:info@senoriaseniors.com"
+                  className="font-medium text-slate-600 hover:text-primary-600"
+                >
+                  info@senoriaseniors.com
+                </a>
+              </p>
+            </div>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
