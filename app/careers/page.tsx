@@ -191,8 +191,9 @@ export default function CareersPage() {
             <p className="mb-8 text-lg leading-relaxed text-slate-600">
               Thank you for applying to join the Senoria Seniors caregiving
               team. We&apos;ve received your application and resume, and our team
-              will review it carefully. We&apos;ll be in touch with next steps
-              soon.
+              will review it carefully. We&apos;ve also sent a confirmation to
+              your email — if you don&apos;t see it shortly, please check your
+              spam folder. We&apos;ll be in touch with next steps soon.
             </p>
             <Link
               href="/"

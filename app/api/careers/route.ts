@@ -36,6 +36,10 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const NOTIFICATION_EMAIL =
       process.env.NOTIFICATION_EMAIL || "grewalramandeepkaur@gmail.com";
+    const FROM_EMAIL =
+      process.env.FROM_EMAIL || "no-reply@senoriaseniors.com";
+    const FROM_NAME = process.env.FROM_NAME || "Senoria Seniors Careers";
+    const FROM_HEADER = `${FROM_NAME} <${FROM_EMAIL}>`;
 
     const formData = await req.formData();
 
@@ -133,7 +137,7 @@ export async function POST(req: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: "Senoria Seniors Careers <onboarding@resend.dev>",
+      from: FROM_HEADER,
       to: [NOTIFICATION_EMAIL],
       subject: `Caretaker Application — ${fullName} (${position})`,
       html: htmlContent,
@@ -145,6 +149,69 @@ export async function POST(req: NextRequest) {
         },
       ],
     });
+
+    const firstName = fullName.split(/\s+/)[0] || fullName;
+    const acknowledgementHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 640px; margin: 0 auto;">
+        <div style="background: linear-gradient(135deg, #0284c7, #0d9488); padding: 24px 32px; border-radius: 12px 12px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 22px;">Application Received</h1>
+          <p style="color: #e0f2fe; margin: 4px 0 0; font-size: 14px;">Senoria Seniors — Careers</p>
+        </div>
+        <div style="background: #ffffff; padding: 32px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 12px 12px; color: #1e293b; font-size: 15px; line-height: 1.6;">
+          <p style="margin: 0 0 16px;">Hi ${escapeHtml(firstName)},</p>
+          <p style="margin: 0 0 16px;">
+            Thank you for applying to join the Senoria Seniors caregiving team.
+            We've received your application for the
+            <strong>${escapeHtml(position)}</strong> role and your resume is
+            safely with our hiring team.
+          </p>
+          <p style="margin: 0 0 16px;">
+            Our team will review your application carefully. If your experience
+            aligns with what we're looking for, we'll reach out with next steps.
+            Please allow us a few business days to get back to you.
+          </p>
+          <p style="margin: 0 0 16px;">
+            In the meantime, feel free to learn more about us at
+            <a href="https://senoriaseniors.com" style="color: #0284c7;">senoriaseniors.com</a>.
+          </p>
+          <p style="margin: 0 0 8px;">Warmly,</p>
+          <p style="margin: 0; font-weight: 600;">The Senoria Seniors Team</p>
+          <hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
+          <p style="margin: 0; color: #94a3b8; font-size: 12px;">
+            This is an automated confirmation — please do not reply to this email.
+            If you did not submit an application to Senoria Seniors, you can
+            safely ignore this message.
+          </p>
+        </div>
+      </div>
+    `;
+    const acknowledgementText = [
+      `Hi ${firstName},`,
+      "",
+      `Thank you for applying to join the Senoria Seniors caregiving team. We've received your application for the ${position} role and your resume is safely with our hiring team.`,
+      "",
+      "Our team will review your application carefully. If your experience aligns with what we're looking for, we'll reach out with next steps. Please allow us a few business days to get back to you.",
+      "",
+      "Warmly,",
+      "The Senoria Seniors Team",
+      "",
+      "— This is an automated confirmation. Please do not reply to this email.",
+    ].join("\n");
+
+    try {
+      await resend.emails.send({
+        from: FROM_HEADER,
+        to: [email],
+        subject: "We received your application — Senoria Seniors",
+        html: acknowledgementHtml,
+        text: acknowledgementText,
+      });
+    } catch (ackError) {
+      console.error(
+        "Failed to send applicant acknowledgement email:",
+        ackError
+      );
+    }
 
     return NextResponse.json(
       { message: "Application submitted successfully." },
